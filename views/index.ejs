@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Guessing Game</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type = "text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+    <div id="container" class="bg-primary" >
+    <form action='/play' method='post'>
+    <h1>Welcome to the Great Number Game!</h1>
+    <p>I am thinking a number between 1 and 100</p>
+    <p>Take a guess</p>
+    <p>guess: <%= guess %></p>
+    <div id="<%= box %>"><%= txt %></div>
+    <input type="<%= hidetxt %>" name="guess" id="box" placeholder="1" >
+    <input type="<%= btn %>" class="btn btn-warning" value="Submit"></input>
+    </form>
+    <form action="/reset" method="POST" >
+        <input type="<%= hide %>" class="btn btn-dark" value="Start Over">
+    </form>
+</div>
+</body>
+</html>
+
+
+<!-- get the button up and running
+    able to compare the number
+     -->
